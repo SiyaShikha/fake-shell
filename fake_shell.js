@@ -1,4 +1,5 @@
 let currentDirectory = '~';
+const files = ['Desktop', 'Downloads', 'Pictures', 'Documents', 'Library', 'Music', 'Public'];
 
 const promptMessage = function () {
   return 'fake shell ' + currentDirectory + ' %';
@@ -12,6 +13,9 @@ const executeCommand = function (commandAndArg) {
   }
   if (command === 'echo') {
     console.log(args.join(' '));
+  }
+  if (command === 'ls') {
+    console.log(files.join('     '));
   }
 }
 
